@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homes Direct Blinds</title>
+    <style>
+        /* CSS for the Hero Section */
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .hero-tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .btn {
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #007BFF;
+            color: #fff;
+            border: 2px solid #007BFF;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-tagline {
+                font-size: 1.2rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* CSS for the Info Section */
+        .info-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+        .info-content {
+            flex: 2;
+            min-width: 350px;
+            text-align: left;
+        }
+        .info-content h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .info-content p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .info-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .info-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        @media (max-width: 992px) {
+            .info-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .info-image, .info-content {
+                flex: none;
+                width: 100%;
+                text-align: center;
+            }
+            .info-content {
+                order: 2;
+            }
+            .info-image {
+                order: 1;
+            }
+        }
+
+      /* CSS for the Blinds Section */
+.blinds-section {
+    padding: 60px 20px;
+    background-color: #e0e0e0; /* Gray background for the whole section */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.blinds-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1a1a1a; /* Black background for the container */
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start; /* Align items to the top */
+}
+.blinds-content {
+    flex: 1;
+    min-width: 300px;
+}
+.blinds-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.blinds-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.blinds-image-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.blinds-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.blinds-list-container {
+    flex: 1;
+    min-width: 300px;
+    padding-top: 0; /* Remove top padding to align with content */
+}
+.blinds-list-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.blinds-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.blinds-list li {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+}
+.blinds-list li:hover {
+    transform: translateY(-5px);
+    background-color: #444;
+}
+.blinds-list h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #00BFFF;
+    margin-bottom: 5px;
+}
+.blinds-list a {
+    text-decoration: none;
+    color: inherit;
+}
+.blinds-list a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .blinds-container {
+        flex-direction: column;
+        padding: 25px;
+    }
+    .blinds-content {
+        order: 2;
+    }
+    .blinds-list-container {
+        order: 1;
+    }
+    .blinds-list-container h3 {
+        text-align: center;
+    }
+    
+
+        }
+/* CSS for the Shades Section */
+.shades-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background for the whole section */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.shades-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.shades-container h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+.shades-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 15px auto; /* Reduced margin to look better with multiple paragraphs */
+    text-align: left; /* Aligned paragraphs to the left */
+}
+.shades-image-wrapper {
+    margin: 40px auto; /* Centered with top and bottom margin */
+    max-width: 700px; /* Reduced the maximum width of the image wrapper */
+}
+.shades-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.shades-types-container {
+    text-align: left; /* Align the types list to the left */
+    margin-top: 40px; /* Added margin for space below the image */
+}
+.shades-types-container h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+.shades-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create a responsive grid */
+    gap: 15px;
+}
+.shades-list li {
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.shades-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.shades-list a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+    display: block;
+}
+.shades-list a:hover {
+    text-decoration: underline;
+}
+/* CSS for the Shutters Section */
+.shutters-section {
+    padding: 60px 20px;
+    background-color: #e0f7fa; /* A light, soft shade of cyan */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.shutters-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.shutters-container h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+.section-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+.shutters-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    text-align: left;
+}
+.shutters-image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+.shutters-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.shutters-list-container {
+    flex: 2;
+    min-width: 300px;
+}
+.shutters-list-container h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.shutters-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.shutters-list li {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.shutters-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.shutters-list h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+.shutters-list h4 a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+}
+.shutters-list h4 a:hover {
+    text-decoration: underline;
+}
+.shutters-list p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .shutters-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .shutters-image-wrapper {
+        margin-bottom: 20px;
+    }
+    .shutters-list-container {
+        text-align: left;
+    }
+    .shutters-list-container h3 {
+        text-align: center;
+    }
+}
+	/* General Layout for Drapery and Screens */
+.drapery-section, .screens-section {
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.drapery-container, .screens-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+.drapery-content, .screens-content {
+    flex: 1;
+    min-width: 300px;
+}
+.drapery-container h2, .screens-container h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+.drapery-container p, .screens-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+.drapery-image-wrapper, .screens-image-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.drapery-image-wrapper img, .screens-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.drapery-list-container, .screens-list-container {
+    flex: 1;
+    min-width: 300px;
+}
+.drapery-list-container h3, .screens-list-container h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+.drapery-list, .screens-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.drapery-list li, .screens-list li {
+    background-color: #f0f8ff; /* A light background for list items */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.drapery-list li:hover, .screens-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.drapery-list h4, .screens-list h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+.drapery-list h4 a, .screens-list h4 a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+}
+.drapery-list h4 a:hover, .screens-list h4 a:hover {
+    text-decoration: underline;
+}
+.drapery-list p, .screens-list p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+}
+
+/* Individual Section Background Colors */
+.drapery-section {
+    background-color: rgb(218, 122, 254);
+}
+.drapery-container {
+    background-color: #fff;
+}
+.screens-section {
+    background-color: rgb(75, 225, 164);
+}
+.screens-container {
+    background-color: #fff;
+}
+
+@media (max-width: 992px) {
+    .drapery-container, .screens-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .drapery-content, .screens-content {
+        order: 2;
+    }
+    .drapery-list-container, .screens-list-container {
+        order: 1;
+    }
+    .drapery-list-container h3, .screens-list-container h3 {
+        text-align: center;
+    }
+}
+	/* Locations Section */
+.locations-section {
+    padding: 60px 20px;
+    background-color: #e0f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.locations-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.locations-container h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+.locations-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+.locations-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+.locations-list-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+.locations-list-container h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+.locations-list {
+    list-style: none; /* Removed the disc style */
+    padding-left: 0;
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #333;
+}
+.locations-list li {
+    margin-bottom: 10px; /* Added some spacing between list items */
+}
+.locations-list a {
+    text-decoration: none;
+    color: #007BFF; /* A clean blue color for links */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.locations-list a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+}
+.locations-map-container {
+    flex: 1.5;
+    min-width: 400px;
+}
+.locations-map-container iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+    .locations-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .locations-list-container, .locations-map-container {
+        width: 100%;
+        min-width: unset;
+    }
+    .locations-list-container {
+        text-align: center;
+        order: 2;
+    }
+    .locations-map-container {
+        order: 1;
+    }
+}
+	/* Contact Us Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.contact-container h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+.contact-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+.contact-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+.contact-info, .contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+.contact-info h3, .contact-form-container h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+.contact-info p {
+    margin-bottom: 10px;
+}
+.contact-info a.contact-link {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+.contact-info a.contact-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+.social-links img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+.social-links img:hover {
+    transform: scale(1.1);
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Copyright Footer */
+.footer-section {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+    </style>
+</head>
+<body>
+
+    <section class="hero-section" style="background-image: url('https://homesdirectblinds.com/wp-content/uploads/2025/07/Our-Experience-Speaks.jpg');">
+        <div class="hero-content">
+            <h1 class="hero-title">Style, Shade, and Simplicity – Direct to Your Home.</h1>
+            <p class="hero-tagline">
+                Transform your space with custom blinds, shades, shutters, and drapery that redefine comfort and elegance.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://homesdirectblinds.com/window-coverings/" class="btn btn-primary">
+                    Explore Our Products
+                </a>
+                <a href="https://homesdirectblinds.com/contact-us/" class="btn btn-secondary">
+                    Get a Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-content">
+                <h2>A New Look for Your Home, Backed by Experience</h2>
+                <p>
+                    Your home is more than just a place to live—it's a reflection of your personality. At Homes Direct Blinds, we understand that. We specialize in transforming homes with high-quality window coverings that do more than just block sunlight. Our blinds, shades, shutters, and drapery provide vital benefits like privacy, enhanced security, and superior energy efficiency to keep your space comfortable all year round.
+                </p>
+                <p>
+                    We offer a wide selection of products, from classic Plantation Shutters that add a touch of timeless elegance, to modern Motorized Shades that you can control with a single tap. Looking for something to manage light? Explore our Roller Shades and Solar Shades. Want a cozy, rustic feel? Our Wood Blinds are the perfect choice. We also offer Drapery & Curtains for a softer look, and a variety of Screens, including Hurricane Screens and Porch Enclosure Screens to protect your home.
+                </p>
+                <p>
+                    What makes us different is our dedication to you. Our process starts with a personalized consultation where we listen to your needs and help you find the perfect product. Our skilled team then handles the entire installation process with care and precision, ensuring a flawless result every time. We are a locally-trusted source, and our expertise is our promise to you.
+                </p>
+                <p>
+                    From our home base in Homestead to the vibrant cities of Miami and Fort Lauderdale, and even up the coast to Vero Beach, we proudly serve all of Florida. Our goal is to make stylish and functional window coverings accessible and affordable for every homeowner.
+                </p>
+            </div>
+            <div class="info-image">
+                <img src="https://homesdirectblinds.com/wp-content/uploads/2025/07/home-blinds-01-e1753771070704.png" alt="Stylish blinds and shutters from Homes Direct Blinds">
+                <img src="https://homesdirectblinds.com/wp-content/uploads/2025/07/Tailored-Window-Solutions-Just-for-You-3.jpg" alt="Tailored Window Solutions from Homes Direct Blinds">
+            </div>
+        </div>
+    </section>
+
+<section class="blinds-section">
+    <div class="blinds-container">
+        <div class="blinds-content">
+            <h2>Explore Our Custom Window Blinds</h2>
+            <p>
+                Window blinds are a timeless choice, offering a perfect blend of style and function. Their adjustable slats give you complete control over light and privacy, allowing you to create the ideal atmosphere in any room. Whether you prefer the warmth of real wood or the durability of modern materials, our wide collection of blinds has something for everyone. From classic designs to smart, motorized options, we help you find the perfect blinds to fit your home and lifestyle.
+            </p>
+            <div class="blinds-image-wrapper">
+                <img src="https://homesdirectblinds.com/wp-content/uploads/2025/07/Blinds.jpg" alt="A stylish living room with elegant window blinds">
+            </div>
+        </div>
+        <div class="blinds-list-container">
+            <h3>Our Most Popular Blinds:</h3>
+            <ul class="blinds-list">
+                <li>
+                    <a href="https://homesdirectblinds.com/window-coverings/window-blinds/vinyl-blinds/"><h4>Vinyl Blinds</h4></a>
+                    <p>An excellent, cost-effective choice for any room. Vinyl blinds are incredibly durable, moisture-resistant, and easy to clean, making them perfect for kitchens, bathrooms, and high-traffic areas. They offer great light control and are available in many colors.</p>
+                </li>
+                <li>
+                    <a href="https://homesdirectblinds.com/window-coverings/window-blinds/wood-blinds/"><h4>Wood Blinds</h4></a>
+                    <p>Nothing beats the natural beauty and warmth of real wood. Wood blinds add a rich, classic feel to any space, giving your windows a premium look. They are lightweight, strong, and provide excellent insulation, helping you save on energy bills.</p>
+                </li>
+                <li>
+                    <a href="https://homesdirectblinds.com/window-coverings/window-blinds/faux-wood-blinds/"><h4>Faux Wood Blinds</h4></a>
+                    <p>Get the luxurious look of real wood without the high cost. Faux wood blinds are made from a durable, moisture-proof material, making them ideal for humid climates. They are resistant to warping and cracking, ensuring they look new for years.</p>
+                </li>
+                <li>
+                    <a href="https://homesdirectblinds.com/window-coverings/window-blinds/vertical-blinds/"><h4>Vertical Blinds</h4></a>
+                    <p>The perfect solution for large windows and sliding glass doors. Vertical blinds are easy to operate and offer full control over light and privacy. They are available in a variety of materials and colors, making them a stylish and practical choice.</p>
+                </li>
+                <li>
+                    <a href="https://homesdirectblinds.com/window-coverings/window-blinds/motorized-blinds/"><h4>Motorized Blinds</h4></a>
+                    <p>Experience the ultimate in convenience and smart home technology. Motorized blinds can be operated with a remote control, a wall switch, or even your smartphone. They're great for hard-to-reach windows and provide added safety for homes with children or pets.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+<section class="shades-section">
+    <div class="shades-container">
+        <h2>Discover the Elegance of Custom Window Shades</h2>
+        <p>
+            Window shades are a modern and elegant way to control light and privacy in your home. They offer a perfect balance of style, comfort, and energy efficiency, making them a popular choice for homeowners looking to elevate their interior design. Unlike traditional blinds, shades are typically made from a single sheet of fabric, which provides a clean, soft aesthetic that complements any decor. Our wide selection of fabrics, from light-filtering sheer materials to complete blackout options, ensures you can find the perfect solution for every room. For an in-depth look, visit our <a href="https://homesdirectblinds.com/window-coverings/window-shades/" style="color: #007BFF; text-decoration: none;">Window Shades</a> page.
+        </p>
+        <p>
+            From the popular Cellular Shades known for their superior insulation to the timeless elegance of Roman Shades, our collection is designed to meet every functional and stylistic need. If you're looking for a sleek, minimalist look, our Roller Shades and Solar Shades provide a clean line that won't distract from your view. For a touch of natural texture, our Woven Wood Shades bring an organic, warm feel to any space. Each shade is meticulously crafted to your window's exact measurements, guaranteeing a flawless fit and finish every time.
+        </p>
+        <p>
+            Our dedication to quality extends beyond the product itself. We offer a seamless, start-to-finish experience, from the initial consultation and measurement to professional installation. Whether you want to add a layer of privacy to your bedroom, reduce glare in your home office, or simply enhance your living room’s ambiance, we have the expertise to help you choose the right shade. Our team ensures that your new window coverings not only look beautiful but also perform flawlessly for years to come.
+        </p>
+
+        <div class="shades-image-wrapper">
+            <img src="https://homesdirectblinds.com/wp-content/uploads/2025/07/Why-Choose-Home-Direct-Blinds-4.jpg" alt="A stylish living room with elegant window shades">
+        </div>
+
+        <div class="shades-types-container">
+            <h3>Our Most Popular Shades:</h3>
+            <ul class="shades-list">
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/cellular-shades/">Cellular Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/pleated-shades/">Pleated Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/roman-shades/">Roman Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/roller-shades/">Roller Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/solar-shades/">Solar Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/wovens-wood-shades/">Woven Wood Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/zebra-shades/">Zebra Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/sheer-shades/">Sheer Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/motorized-shades/">Motorized Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/blackout-shades/">Blackout Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/bamboo-shades/">Bamboo Shades</a></li>
+                <li><a href="https://homesdirectblinds.com/window-coverings/window-shades/light-filtering-shades/">Light Filtering Shades</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="shutters-section">
+    <div class="shutters-container">
+        <h2>Elegant Window Shutters for Timeless Style</h2>
+        <p class="section-description">
+            Window shutters are the ultimate choice for durability, elegance, and energy efficiency. They add a sophisticated architectural element to any room while providing exceptional light control and privacy. Our custom-made shutters are crafted to perfection, ensuring a seamless fit for any window size or shape.
+        </p>
+        <div class="shutters-content-wrapper">
+            <div class="shutters-image-wrapper">
+                <img src="https://homesdirectblinds.com/wp-content/uploads/2025/07/Classic-Shutters-Built-to-Enhance-Style-and-Privacy.jpg" alt="A classic living room with elegant white window shutters">
+            </div>
+            <div class="shutters-list-container">
+                <h3>Our Most Popular Shutters:</h3>
+                <ul class="shutters-list">
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/plantation-shutters/">Plantation Shutters</a></h4>
+                        <p>A classic and timeless choice, known for their wide louvers and elegant design. Plantation Shutters offer superior light control, energy efficiency, and a touch of sophistication that can significantly increase your home's value.</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/wood-shutters/">Wood Shutters</a></h4>
+                        <p>Crafted from premium, natural wood, these shutters bring warmth and a rich, traditional look to any space. They are highly customizable and can be stained or painted to match your home's unique style.</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/composite-shutters/">Composite Shutters</a></h4>
+                        <p>Combining the beauty of wood with the durability of synthetic materials, composite shutters are perfect for high-moisture areas. They resist warping, cracking, and fading, making them a long-lasting and low-maintenance option.</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/vinyl-shutters/">Vinyl Shutters</a></h4>
+                        <p>Vinyl shutters are a highly durable and moisture-resistant option, ideal for bathrooms and kitchens. They are easy to clean, colorfast, and offer a simple, clean look at an affordable price point.</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/motorized-shutters/">Motorized Shutters</a></h4>
+                        <p>For ultimate convenience, motorized shutters can be controlled with a remote, smartphone, or smart home system. They are perfect for large or hard-to-reach windows and provide a modern, effortless solution.</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/storm-shutters/">Storm Shutters</a></h4>
+                        <p>Designed for protection against harsh weather and hurricanes, storm shutters provide a crucial layer of security. They are built to withstand extreme winds and debris, giving you peace of mind during storm season.</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/custom-shutters/">Custom Shutters</a></h4>
+                        <p>We believe every home is unique. Our custom shutters are tailored to your exact specifications, from material and color to shape and size, ensuring a perfect and unique addition to your home.</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/louvered-shutters/">Louvered Shutters</a></h4>
+                        <p>Traditional louvered shutters feature fixed or operable slats that allow for ventilation and light control. They are a timeless choice that adds curb appeal and a classic look to both interior and exterior windows.</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://homesdirectblinds.com/window-coverings/window-shutters/rolling-shutters/">Rolling Shutters</a></h4>
+                        <p>These shutters roll up into a compact box when not in use, offering security and protection with a clean, discreet appearance. They provide excellent insulation, noise reduction, and are great for both homes and businesses.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="drapery-section">
+    <div class="drapery-container">
+        <div class="drapery-content">
+            <h2>Luxury and Elegance with Custom Drapery</h2>
+            <p>
+                Drapery adds a layer of sophistication, texture, and warmth to any room. More than just a window covering, it's a statement of style that can transform the entire feel of your space. Our custom drapery is available in a wide array of fabrics, patterns, and colors, allowing you to create a look that is uniquely yours.
+            </p>
+            <div class="drapery-image-wrapper">
+                <img src="https://homesdirectblinds.com/wp-content/uploads/2025/07/Custom-Drapes.jpg" alt="A living room with elegant, long custom drapes">
+            </div>
+        </div>
+        <div class="drapery-list-container">
+            <h3>Our Most Popular Drapery Styles:</h3>
+            <ul class="drapery-list">
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/drapery-curtains/custom-drapery/">Custom Drapery</a></h4>
+                    <p>Tailored specifically for your home, our custom drapes provide a perfect fit and a unique look that ready-made curtains simply can't match.</p>
+                </li>
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/drapery-curtains/motorized-drapery/">Motorized Drapery</a></h4>
+                    <p>Enjoy the convenience of effortless control with a remote or smartphone. Ideal for hard-to-reach windows and creating a luxurious ambiance.</p>
+                </li>
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/drapery-curtains/sheer-drapery/">Sheer Drapery</a></h4>
+                    <p>Perfect for filtering sunlight and adding a soft, ethereal glow to your room while maintaining privacy and a gentle flow of natural light.</p>
+                </li>
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/drapery-curtains/blackout-drapery/">Blackout Drapery</a></h4>
+                    <p>Designed to block 100% of external light, these drapes are perfect for bedrooms, home theaters, or any space where complete darkness is needed.</p>
+                </li>
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/drapery-curtains/valance/">Valance</a></h4>
+                    <p>A decorative top treatment that adds a finishing touch to your window coverings, hiding hardware and adding a clean, polished look.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="screens-section">
+    <div class="screens-container">
+        <div class="screens-content">
+            <h2>Durable and Functional Window Screens</h2>
+            <p>
+                Window screens are essential for keeping out insects and debris while allowing fresh air to circulate. Our custom screens are built to last, providing both protection and comfort without obstructing your view. They are a practical solution for improving your home's ventilation and enjoying the outdoors from within.
+            </p>
+            <div class="screens-image-wrapper">
+                <img src="https://homesdirectblinds.com/wp-content/uploads/2025/07/Keep-Insects-Out-and-Comfort-In-With-Custom-Window-Screens-1.jpg" alt="A person enjoying a porch with a custom screen enclosure">
+            </div>
+        </div>
+        <div class="screens-list-container">
+            <h3>Our Most Popular Screens:</h3>
+            <ul class="screens-list">
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/screens/window-screens/">Window Screens</a></h4>
+                    <p>Classic screens designed for everyday use, providing a durable barrier against bugs while maintaining airflow.</p>
+                </li>
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/screens/sliding-door-screens/">Sliding Door Screens</a></h4>
+                    <p>Custom-fit screens for sliding glass doors, offering easy access and reliable protection from insects and debris.</p>
+                </li>
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/screens/porch-enclosure-screens/">Porch Enclosure Screens</a></h4>
+                    <p>Transform your porch or patio into a comfortable, bug-free living area, allowing you to enjoy the fresh air without any hassle.</p>
+                </li>
+                <li>
+                    <h4><a href="https://homesdirectblinds.com/window-coverings/screens/hurricane-screens/">Hurricane Screens</a></h4>
+                    <p>Heavy-duty, robust screens built to provide exceptional protection during hurricanes and severe storms, safeguarding your windows and home.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="locations-section">
+    <div class="locations-container">
+        <h2>We Proudly Serve All of Florida</h2>
+        <p>
+            From our home base in Homestead to the bustling cities of Miami and Fort Lauderdale, we're dedicated to bringing high-quality window coverings to homes across the state. Our service extends to communities large and small, ensuring that no matter where you are in Florida, you have access to stylish and professional window solutions.
+        </p>
+        <div class="locations-content-wrapper">
+            <div class="locations-list-container">
+                <h3>Our Service Areas Include:</h3>
+                <ul class="locations-list">
+                    <li><a href="https://homesdirectblinds.com/service-areas/homestead-fl/" target="_blank">Homestead</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/florida-city-fl/" target="_blank">Florida City</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/redland-fl/" target="_blank">Redland</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/miami-fl/" target="_blank">Miami</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/fort-lauderdale-fl/" target="_blank">Fort Lauderdale</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/hollywood-fl/" target="_blank">Hollywood</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/pompano-beach-fl/" target="_blank">Pompano Beach</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/west-palm-beach-fl/" target="_blank">West Palm Beach</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/boca-raton-fl/" target="_blank">Boca Raton</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/boynton-beach-fl/" target="_blank">Boynton Beach</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/delray-beach-fl/" target="_blank">Delray Beach</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/port-st-lucie-fl/" target="_blank">Port St. Lucie</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/fort-pierce-fl/" target="_blank">Fort Pierce</a></li>
+                    <li><a href="https://homesdirectblinds.com/service-areas/vero-beach-fl/" target="_blank">Vero Beach</a></li>
+                </ul>
+            </div>
+            <div class="locations-map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115160.10649726207!2d-80.50571344445657!3d25.48549603221387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9c227f29f12d5%3A0x673c9808605d54a2!2sHomestead%2C%20FL%2C%20USA!5e0!3m2!1sen!2spk!4v1709462529321!5m2!1sen!2spk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact-section">
+    <div class="contact-container">
+        <h2>Let's Get Started on Your New Look</h2>
+        <p>
+            Whether you need a free quote, a consultation, or have a question about our products, our team is here to help. Contact us today and let's find the perfect window solution for your home.
+        </p>
+
+        <div class="contact-content-wrapper">
+            <div class="contact-info">
+                <h3>Our Details</h3>
+                <p>
+                    <a href="tel:786-880-0081" class="contact-link">
+                        <strong>Phone:</strong> 786-880-0081
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:info@homesdirectblinds.com" class="contact-link">
+                        <strong>Email:</strong> info@homesdirectblinds.com
+                    </a>
+                </p>
+                <p>
+                    <strong>Address:</strong><br>
+                    29063 SW 151st Ave<br>
+                    Homestead, FL 33033
+                </p>
+                
+                <h3 style="margin-top: 30px;">Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/homesdirectblinds" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/homesdirectblinds/" target="_blank">Instagram</a>
+                    <a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6209935.088770524!2d-80.59217823869965!3d25.34087773213441!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ddf95637369d%3A0x4e11265be4c5b6b9!2s1860%20SE%2018th%20Terrace%2C%20Homestead%2C%20FL%2033035!5e0!3m2!1sen!2sus!4v1756895101391!5m2!1sen!2sus" target="_blank">Google Maps</a>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Request a Free Quote</h3>
+                <form action="#" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number">
+                    <textarea name="message" rows="5" placeholder="Tell Us About Your Project" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="footer-container">
+        <p>© 2024 Homes Direct Blinds. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
